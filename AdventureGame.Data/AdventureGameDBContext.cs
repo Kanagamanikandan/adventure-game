@@ -8,10 +8,5 @@ namespace AdventureGame.Data
     {
         public DbSet<DecisionTree> DecisionTrees { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
-
     }
 }

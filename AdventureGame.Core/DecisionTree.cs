@@ -13,9 +13,10 @@ namespace AdventureGame.Core
 
         public DecisionTree(string statement, DecisionTree positive, DecisionTree negative)
         {
+            
             Statement = statement;
-            Negative = negative;
-            Positive = positive;
+            Positive = positive ?? throw new ArgumentNullException(nameof(positive));
+            Negative = negative ?? throw new ArgumentNullException(nameof(negative));
         }
         public Guid Id { get; set; }
         public string Statement { get; private set; }
